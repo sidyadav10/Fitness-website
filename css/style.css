@@ -210,58 +210,6 @@ nav .navlist a li{
 }
 
 
-/* ------signup section---------- */
-/* .signup{
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-}
-.newsletter p{
-    color: var(--section-bg);
-}
-.newsletter h3{
-    color: var(--secondary);
-}
-.newsletter h3,p{
-    text-transform: capitalize;
-}
-.newsletter{
-    width: 80%;
-    height: 60vh;
-    border: 1px solid black;
-    background-color: var(--primary);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: column;
-}
-
-
-.newsletter button:hover{
-    transition: all .2s linear;
-    background-color: var(--bg-color);
-    border: none;
-}
-.newsletter button{
-    background-color: var(--secondary);
-    width: 20%;
-    transition:all .2s linear;
-    height: 50px;
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: .5rem;
-}
-*/
-
-
-
-
-
-
-
 /* ------------Trainer section--------- */
 
 .goals-section{
