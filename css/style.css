@@ -1,0 +1,769 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+}
+
+body{
+    --primary:#2c3531;
+    --bg-color:#116466;
+    --btn-color:#d9b086;
+    --btn2-color:#ffcb9a;
+    --section-bg:#E4E4E4;
+    --secondary:#d1e8e2;
+}
+
+h1,h2{
+    font-size: 7rem;
+    font-weight: 800;
+    color: var(--bg-color);
+}
+h3,h4{
+    font-size: 4.5rem;
+    color: var(--bg-color);
+}
+h5,h6{
+    font-size: 4rem;
+    color: var(--section-bg);
+}
+li,a{
+    font-size: 2rem;
+    list-style: none;
+    text-decoration: none;
+    color: var(--secondary);
+}
+p{
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+#menu{
+    color: red;
+    font-size: 4rem;
+    margin-block: 2rem;
+    display: none;
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: var(--secondary);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    display: none;
+}
+nav .left-nav{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav .left-nav img{
+    width: 100px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+nav .navlist{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+nav .navlist a{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    /* line-height: 80px; */
+}
+nav .navlist a li:hover{
+    transition: .4s linear;
+    color: var(--bg-color);
+    border-bottom: 2px solid var(--primary);
+}
+
+nav .navlist a li{
+    width: 100%;
+    transition: .4s linear;
+    font-weight: 500;
+    padding:  1rem;
+    color: var(--primary);
+    border-bottom: 2px solid transparent;
+}
+
+/* -------------- Hero section----------- */
+
+.common-section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 0 10rem;
+}
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .left-hero p{
+    margin:1rem 0;
+}
+.hero-section .left-hero .btn a img{
+    width: 250px;
+    margin-right: 2rem;
+}
+.hero-section .left-hero .btn{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    padding-block: 2rem;
+}
+.hero-section .left-hero{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: flex-start;
+    
+}
+.hero-section .right-hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.hero-section .right-hero img{
+    width: 90%;
+    height: 80vh;
+    margin-top: 2rem;
+}
+
+/* ------------About section--------------- */
+.about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.about .about-section{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+}
+.about .about-section img{
+    width: 90%;
+    height: 80vh;
+    padding: 3rem;
+}
+.about .right-about p{
+    margin-block: 1.5rem;
+}
+.about .right-about{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.about .right-about .about-btn button{
+    width: 180px;
+    height: 80px;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    margin-right: 10rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.about .right-about .about-btn{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.about .right-about .about-btn .btn1:hover,.about .right-about .about-btn .btn2{
+    background-color: var(--btn2-color);
+    transition: .3s linear;
+    color: var(--section-bg);
+}
+.about .right-about .about-btn .btn1,.about .right-about .about-btn .btn2:hover{
+    background-color: var(--btn-color);
+    color: var(--section-bg);
+}
+
+
+/* ------signup section---------- */
+/* .signup{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.newsletter p{
+    color: var(--section-bg);
+}
+.newsletter h3{
+    color: var(--secondary);
+}
+.newsletter h3,p{
+    text-transform: capitalize;
+}
+.newsletter{
+    width: 80%;
+    height: 60vh;
+    border: 1px solid black;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+}
+
+
+.newsletter button:hover{
+    transition: all .2s linear;
+    background-color: var(--bg-color);
+    border: none;
+}
+.newsletter button{
+    background-color: var(--secondary);
+    width: 20%;
+    transition:all .2s linear;
+    height: 50px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+}
+*/
+
+
+
+
+
+
+
+/* ------------Trainer section--------- */
+
+.goals-section{
+    height: 100vh;
+    padding: 7rem 3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.goals-section .goals{
+    width: 100%;
+    height: 50rem;
+    border: 1px solid green;
+    display: flex;
+    background-color: var(--primary);
+    justify-content: center;
+    /* align-items: center; */
+    padding-block: 3rem;
+    margin-top: 1rem;
+}
+.goals .goal1:hover img,.goal2:hover img,.goal3:hover img{
+    transform: scale(.7) rotate(360deg);
+    transition: .4s linear;
+}
+.goals .goal1:hover,.goal2:hover,.goal3:hover{
+    background-color: var(--secondary);
+}
+.goals .goal1,.goal2,.goal3{
+    height: 44rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border-radius: 20px;
+    border: 1px solid var(--bg-color);
+    background-color: var(--section-bg);
+}
+.goals .goal1{
+    margin-inline: 3rem;
+}
+.goals .goal2,.goal3{
+    margin-right: 3rem;
+}
+.goals .goal1 img,.goal2 img,.goal3 img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+    transition: .4s linear;
+}
+.goals .goal1 h3,.goal2 h3,.goal3 h3{
+    width: 100%;
+    margin: 0  0 2rem;
+}
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 52%;
+    }
+    nav .navlist{
+        display: flex;
+        width: 60%;
+    }
+    nav .navlist a{
+        padding: 0 1rem;
+    }
+    .common-section{
+        padding: 0 8rem;
+    }
+    .hero-section .left-hero .btn a img{
+        width: 180px;
+    }
+
+    
+    .goals-section .goals{
+        height: 55rem;
+        align-items: center;
+       
+    }
+    .goals .goal1 h3,.goal2 h3,.goal3 h3{
+        width: 100%;
+    }
+    .goals .goal1,.goal2,.goal3{
+        height: 49rem;
+    }
+
+    .goals .goal1 img,.goal2 img,.goal3 img{
+        margin-top: 5rem;
+    }
+    .goals .goal1{
+        margin-inline: 1.9rem;
+    }
+    .goals .goal2,.goal3{
+        margin-right: 1.9rem;
+    }
+
+    
+   
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:900px){
+    html{
+        font-size:50%;
+    }
+    
+    nav .navlist{
+        position: absolute;
+        top: 80px;
+        right: -60%;
+        height: 50vh;
+        background-color: var(--section-bg);
+        display: block;
+        transition: .2s linear;
+    }
+    #check:checked ~.navlist{
+        right: 0;
+        transition: .4s linear;
+    }
+    #menu{
+        display: block;
+        color: var(--primary);
+        font-size: 4rem;
+        margin:3rem;
+    }
+    nav .navlist a li:hover{
+        background-color: var(--secondary);
+        color: var(--bg-color);
+    }
+    nav .navlist a {
+        padding: 0;
+        text-align: center;
+    }
+    .common-section{
+        padding: 8rem 5rem;
+    }
+    .hero-section{
+        width: 100%;
+        flex-flow: column-reverse;
+    }
+    .hero-section .left-hero,.right-hero{
+        width: 100%;
+        height: 80vh;
+    }
+    .hero-section .right-hero img{
+        width: 100%;
+        height: 60vh;
+        padding: 3rem;
+
+    }
+
+    .hero-section .left-hero .btn a img{
+        width: 200px;
+    }
+    .about{
+        flex-flow: column;
+    }
+    .about .about-section,.about .right-about{
+        width: 100%;
+        height: 50vh;
+    }
+    .about .about-section img{
+        width: 100%;
+        height: 50vh;
+    }
+   
+
+
+
+    .goals-section{
+        /* z-index: -1; */
+        padding: 10rem 2rem;
+    }
+    .goals-section .goals{
+        height: 120rem;
+        flex-flow: column;
+    }
+    .goals .goal1 img,.goal2 img,.goal3 img{
+        width: 90px;
+        margin-top: 3rem;
+        height: 90px;
+    }
+    .goals .goal1,.goal2,.goal3{
+        margin-inline: 2rem;
+    }
+
+    .goals .goal1{
+        margin-top: 3rem;
+    }
+    .goals .goal2{
+        margin-top: 3rem;
+    }
+    .goals .goal3{
+        margin-block: 3rem;
+    }
+
+    
+}
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    html{
+        font-size: 48%;
+    }
+    #menu{
+        display: block;
+    }
+    nav .navlist{
+        position: absolute;
+        top: 80px;
+        right: -60%;
+        height: 50vh;
+        background-color: var(--section-bg);
+        display: block;
+        transition: .2s linear;
+    }
+    #check:checked ~.navlist{
+        right: 0;
+        transition: .4s linear;
+    }
+    #menu{
+        display: block;
+        color: var(--primary);
+        font-size: 4rem;
+        margin-block: 2.5rem;
+    }
+    nav{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    nav .left-nav img{
+        width: 80px;
+        height: 60px;
+    }
+    nav .navlist a li:hover{
+        background-color: var(--secondary);
+        color: var(--bg-color);
+    }
+    nav .navlist a {
+        padding:  0;
+    }
+    nav .navlist a li{
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .common-section{
+
+        padding: 10rem 4rem;
+    }
+    .hero-section{
+        width:100%;
+        flex-flow: column-reverse;
+    }
+    .hero-section .left-hero{
+        width: 100%;   
+    }
+    .hero-section .right-hero{
+        width: 100%;   
+        
+    }
+    .hero-section .right-hero img{
+        width: 100%;
+        height: 50vh;
+        padding: 5rem;
+    }
+    .hero-section .left-hero .btn a img{
+        width: 180px;
+    }
+    .about {
+        height: 100vh;
+        flex-flow: column;
+    }
+    .about .about-section {
+        width: 100%;
+        height: 100vh;
+    }
+    .about .about-section img{
+        height: 50vh;
+    }
+    .about .right-about{
+        width: 100%;
+        height: 100vh;
+    }
+    .about .right-about .about-btn button{
+        width: 160px;
+        height: 60px;
+    }
+    .goals-section{
+        padding: 10rem 2rem;
+    }
+    .goals-section .goals{
+        flex-flow: column;
+        height: 120rem;
+        margin-top: 2rem;
+    }
+    .goals .goal1,.goal2,.goal3{
+        justify-content: space-around;
+        height: 90rem;
+        margin-inline: 2rem;
+    }
+    .goals .goal3{
+
+        margin-block: 3rem;
+    }
+    .goals .goal2{
+        margin-top: 3rem;
+
+    }
+    .goals .goal1{
+        margin-top: 3rem;
+    }
+    .goals .goal1 img,.goal2 img,.goal3 img{
+        width: 90px;
+        height: 90px;
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:480px){
+    html{
+        font-size: 45%;
+    }
+    h1,h2{
+        font-size: 4.5rem;
+    }
+    nav{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    nav .left-nav img{
+        width: 80px;
+        height: 60px;
+    }
+    nav .navlist a li:hover{
+        background-color: var(--secondary);
+        color: var(--bg-color);
+    }
+    nav .navlist a {
+        padding:  0;
+    }
+    nav .navlist a li{
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    nav .navlist{
+        position: absolute;
+        top: 80px;
+        right: -60%;
+        height: 50vh;
+        background-color: var(--section-bg);
+        display: block;
+        transition: .2s linear;
+    }
+    
+    #check:checked ~ .navlist{
+        right: 0;
+        transition: .4s linear;
+    }
+    #menu{
+        display: block;
+        color: var(--primary);
+        font-size: 4rem;
+        margin-block: 3.5rem;
+    }
+    .common-section{
+        padding: 6rem 4rem;
+    }
+    .hero-section{
+        justify-content: space-between;
+        height: 90vh;
+        flex-flow: column-reverse;
+    }
+    .hero-section .right-hero img{
+        height: 50vh;
+        width: 100%;
+        padding: 10rem 0;
+    }
+    .hero-section .right-hero{
+        width: 100%;
+        height: 50vh;
+    }
+    .hero-section .left-hero{
+        width: 100%;
+        height: 50vh;
+        padding-top: 3rem;
+    }
+.hero-section .left-hero .btn a img{
+    width: 100px;
+}
+.about{
+    height: 90vh;
+    width: 100%;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.about .about-section{
+    height: 50vh;
+    width: 100%;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+.about .about-section img{
+    width: 100%;
+    height: 50vh;
+    margin: 10rem 0;
+}
+.about .right-about{
+    width: 100%;
+    height: 50vh;
+}
+
+.about .right-about .about-btn{
+    height: 50px;
+}
+.about .right-about .about-btn button{
+    width:90px;
+    height: 40px;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+}
+
+
+/* ------goalsection--- */
+.goals-section h1{
+    margin-top: 3rem;
+}
+.goals-section{
+    padding: 10rem 0rem;
+}
+.goals-section .goals{
+    height: 110rem;
+    flex-flow: column;
+}
+.goals .goal1,.goal2{
+    height: 50vh;
+}
+.goal1{
+    margin-bottom: 0;
+}
+.goals .goal1 img,.goal2 img,.goal3 img{
+    width: 70px;
+    height: 70px;
+}
+.goals .goal1 h3,.goal2 h3,.goal3 h3{
+    margin-top: 3rem;
+}
+
+
+}
